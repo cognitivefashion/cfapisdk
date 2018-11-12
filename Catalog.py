@@ -403,7 +403,8 @@ class Catalog():
 
         if status == 202: 
             if image_id is None:
-                image_id = response_product['data']['images'].keys()[0]
+                image_ids = list(response_product['data']['images'].keys())
+                image_id  = image_ids[0]
 
             image_url = response_product['data']['images'][image_id]['image_url']
             image_filename = response_product['data']['images'][image_id]['image_filename']
