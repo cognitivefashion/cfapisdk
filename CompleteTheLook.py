@@ -55,7 +55,6 @@ class CompleteTheLook():
     # params: 
     #--------------------------------------------------------------------------
     def get_recommendation(self,
-                           query_text,
 			   gender,
                            query_text)
                            
