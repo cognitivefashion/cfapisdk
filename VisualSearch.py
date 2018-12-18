@@ -268,7 +268,8 @@ class VisualSearch():
                sort_option='visual_similarity',
                reweight_similarity_scores=True,
                group_by=None,
-               unique_products=False):
+               unique_products=False,
+               return_original_predictions=False):
         """ Get visually similar products in the catalog for an uploaded image.
 
         :params:
@@ -309,7 +310,11 @@ class VisualSearch():
                 appear multiple times (with a different image_id). If this 
                 parameter is set to True then the results are post-filtered 
                 to contain only unique products (the best matching image_id is
-                retained).                                       
+                retained).     
+            - return_original_predictions : boolean, optional (default: False)
+                If you set this to True returns the top-5 predictions from
+                the classifier before the category mapping. This is useful
+                to debug the classifier and the category mappings.                                                   
         """
         
         params = {}
@@ -319,6 +324,7 @@ class VisualSearch():
         params['visual_search_categories_threshold'] = visual_search_categories_threshold
         params['reweight_similarity_scores'] = str(reweight_similarity_scores).lower()
         params['unique_products'] = str(unique_products).lower()
+        params['return_original_predictions'] = str(return_original_predictions).lower()
         if category is not None:
             params['category'] = ','.join(category)
         if group_by is not None:
