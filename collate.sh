@@ -7,3 +7,6 @@ cp -a /cognitive_fashion/code/cfapicatalog/sdk/gist_Catalog.py gists
 
 cp -a /cognitive_fashion/code/cfapivisualsearch/sdk/VisualSearch.py .
 cp -a /cognitive_fashion/code/cfapivisualsearch/sdk/gist_VisualSearch.py gists
+
+cp -a /cognitive_fashion/code/cfapinls/cfapinls/sdk/NaturalLanguageSearch.py .
+cp -a /cognitive_fashion/code/cfapinls/cfapinls/sdk/gist_NaturalLanguageSearch.py gists

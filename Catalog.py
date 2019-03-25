@@ -23,6 +23,7 @@ __all__ = ["Catalog"]
 import os
 import json
 import requests
+
 try:
     from urllib.parse import urljoin
 except ImportError:
